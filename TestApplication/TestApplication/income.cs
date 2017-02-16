@@ -8,12 +8,12 @@ namespace TestApplication
 {
     public class Income
     {
-        public enum PayFrequency { Monthly, Semimonthly, Biweekly, Weekly };
+        public enum PayFrequency { Monthly = 0, Semimonthly = 1, Biweekly = 2, Weekly = 3 };
 
-        PayFrequency Frequency;
-        decimal Amount;
-        DateTime Date;
-        DateTime Date2;
+        public PayFrequency Frequency { get; }
+        public decimal Amount { get; }
+        public DateTime Date { get; }
+        public DateTime Date2 { get; }
         DayOfWeek PayDayOfWeek;
 
         public Income(decimal amount, PayFrequency frequency, DateTime date)
